@@ -27,15 +27,15 @@ runs:
     - id: receive
       shell: bash
       run: |
-        PAYLOAD_LONGTERM=$(curl -s https://kernel-info.manjaro-sway.download/\?category\=longterm | jq '.[0]')
+        PAYLOAD_LONGTERM=$(curl -s https://kernel-info.manjaro-hyprland.timesavior.io/\?category\=longterm | jq '.[0]')
         echo "longterm=$(echo $PAYLOAD_LONGTERM | jq -r '.version')" >> $GITHUB_OUTPUT
         echo "longterm-pkg=$(echo $PAYLOAD_LONGTERM | jq -r '.packageName')" >> $GITHUB_OUTPUT
 
-        PAYLOAD_STABLE=$(curl -s https://kernel-info.manjaro-sway.download/\?category\=stable | jq '.[0]')
+        PAYLOAD_STABLE=$(curl -s https://kernel-info.manjaro-hyprland.timesavior.io/\?category\=stable | jq '.[0]')
         echo "stable=$(echo $PAYLOAD_STABLE | jq -r '.version')" >> $GITHUB_OUTPUT
         echo "stable-pkg=$(echo $PAYLOAD_STABLE | jq -r '.packageName')" >> $GITHUB_OUTPUT
 
-        PAYLOAD_MAINLINE=$(curl -s https://kernel-info.manjaro-sway.download/\?category\=mainline | jq '.[0]')
+        PAYLOAD_MAINLINE=$(curl -s https://kernel-info.manjaro-hyprland.timesavior.io/\?category\=mainline | jq '.[0]')
         echo "mainline=$(echo $PAYLOAD_MAINLINE | jq -r '.version')" >> $GITHUB_OUTPUT
         echo "mainline-pkg=$(echo $PAYLOAD_MAINLINE | jq -r '.packageName')" >> $GITHUB_OUTPUT
 
