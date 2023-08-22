@@ -1,7 +1,8 @@
 name: 'kernel-info-action'
 description: 'retrieve the current kernel versions by category'
-icon: 'info'
-color: 'green'
+brand:
+  icon: 'info'
+  color: 'green'
 
 outputs:
   longterm:
